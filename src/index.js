@@ -1,10 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {axiosPost, axiosGet} from './api/http'
+import {ConfigProvider} from 'antd'
+import zhCN from 'antd/es/locale/zh_CN';
+React.$axiosGet = axiosGet;
+React.$axiosPost = axiosPost;
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+ReactDOM.render(
+		<ConfigProvider locale={zhCN}>
+			<App />
+		</ConfigProvider>
+		,
+		document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -1,0 +1,19 @@
+.titleBar {
+  height: 30px;
+  line-height: 30px;
+  border-radius: 3px;
+  background: #f7f7f7;
+  overflow: hidden;
+  margin: 30px 0;
+  .sideBorder {
+    height: 30px;
+    width: 8px;
+    float: left;
+    margin-right: 10px;
+  }
+  span {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+  }
+}
